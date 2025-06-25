@@ -12,10 +12,22 @@
             font-family: 'Poppins', sans-serif;
         }
         .hero-image {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/dbed0vjcr/image/upload/v1750847743/soweto-graphics-8jq-0pWskbI-unsplash_ia1p0f.jpg');
+            position: relative;
             background-position: center;
             background-size: cover;
-            filter: grayscale(80%); /* Applied grayscale filter */
+        }
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg');
+            background-position: center;
+            background-size: cover;
+            filter: grayscale(80%);
+            z-index: -1;
         }
 
         /* Custom colors to match logo */
@@ -43,7 +55,7 @@
     <nav class="bg-chileka-blue text-white shadow-lg">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <img src="https://res.cloudinary.com/dbed0vjcr/image/upload/v1750712658/CYO-removebg-preview_x4rwva.png" alt="Chileka Youth Organization Logo" class="h-16">
+                <img src="images/cyo-logo.png" alt="Chileka Youth Organization Logo" class="h-16">
             </div>
             <div class="hidden md:flex space-x-6">
                 <a href="#" class="hover:text-cyo-orange transition-all duration-300">Home</a>
@@ -67,7 +79,7 @@
         </div>
     </nav>
 
-       <section class="hero-image bg-cover bg-center text-white py-24 md:py-32">
+    <section class="hero-image bg-cover bg-center text-white py-24 md:py-32">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">Empowering Malawian Youth</h1>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up delay-100">
@@ -89,7 +101,7 @@
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Key Programs</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://res.cloudinary.com/dbed0vjcr/image/upload/v1750847743/soweto-graphics-8jq-0pWskbI-unsplash_ia1p0f.jpg" alt="Child Protection Program" class="w-full h-48 object-cover">
+                    <img src="images/child-protection.jpg" alt="Child Protection Program" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-chileka-blue">Child Protection</h3>
                         <p class="text-gray-600 mb-4">
@@ -100,7 +112,7 @@
                 </div>
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://res.cloudinary.com/dbed0vjcr/image/upload/v1750847938/Donate-to-plant-fruit-trees-in-Malawi-1-1024x410_ncasav.jpg" alt="Climate Resilience Program" class="w-full h-48 object-cover">
+                    <img src="images/climate-resilience.jpg" alt="Climate Resilience Program" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-chileka-blue">Climate Resilience</h3>
                         <p class="text-gray-600 mb-4">
@@ -111,7 +123,7 @@
                 </div>
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img src="https://res.cloudinary.com/dbed0vjcr/image/upload/v1750848144/emmanuel-ikwuegbu-MUyq5MiVE2w-unsplash_kcp1nq.jpg" alt="Youth Empowerment Program" class="w-full h-48 object-cover">
+                    <img src="images/youth-empowerment.jpg" alt="Youth Empowerment Program" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-chileka-blue">Youth Empowerment</h3>
                         <p class="text-gray-600 mb-4">
@@ -136,7 +148,7 @@
                 Your support helps us continue our mission to empower vulnerable children and their communities in Malawi.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-3 px-6 rounded-lg text-lg transition-all duration-300">
+                <a href="#donation-form" class="bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-3 px-6 rounded-lg text-lg transition-all duration-300">
                     Donate Now
                 </a>
                 <a href="#" class="bg-transparent hover:bg-blue-700 text-white font-bold py-3 px-6 border border-white rounded-lg text-lg transition-all duration-300">
@@ -146,28 +158,33 @@
         </div>
     </section>
 
-        <section id="about" class="py-16 bg-white">
+    <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="about-us.jpg" alt="Chileka Youth Organization Team" class="rounded-lg shadow-lg w-full">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-6 text-gray-800">About Chileka Youth Organization</h2>
-                    <p class="text-gray-600 mb-4">
-                        Established in 2025, Chileka Youth Organization is a non-profit dedicated to securing rights of the poor and marginalized, promoting good governance, and developing sustainable livelihoods in Malawi.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        Our main thrust is promoting people's participation at all levels of the state and society, accountability, capacity development and access to resources.
-                    </p>
-                    <div class="mb-6">
-                        <h3 class="text-xl font-bold mb-3 text-chileka-blue">Our Vision</h3>
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">About Chileka Youth Organization</h2>
+                <p class="text-gray-600 mb-4">
+                    Established in 2025, Chileka Youth Organization is a non-profit dedicated to securing rights of the poor and marginalized, promoting good governance, and developing sustainable livelihoods in Malawi.
+                </p>
+                <p class="text-gray-600 mb-4">
+                    Our main thrust is promoting people's participation at all levels of the state and society, accountability, capacity development and access to resources.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mt-8">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-eye text-chileka-blue text-2xl mr-4"></i>
+                            <h3 class="text-xl font-bold text-chileka-blue">Our Vision</h3>
+                        </div>
                         <p class="text-gray-600 italic">
                             "A society where children live happily in a safe, caring and stimulating environment that promotes the best of their potential towards a poverty free society."
                         </p>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-3 text-chileka-blue">Our Mission</h3>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-bullseye text-chileka-blue text-2xl mr-4"></i>
+                            <h3 class="text-xl font-bold text-chileka-blue">Our Mission</h3>
+                        </div>
                         <p class="text-gray-600 italic">
                             "Chileka Youth Organization aims to uphold human dignity, equity and accountability through empowering and protecting vulnerable children and their communities so that these children can lead a bright future."
                         </p>
@@ -177,7 +194,7 @@
         </div>
     </section>
 
-        <section id="get-involved" class="py-16 bg-gray-100">
+    <section id="get-involved" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Get Involved</h2>
             
@@ -190,7 +207,7 @@
                     <p class="text-gray-600 mb-6">
                         Your financial support helps us continue our vital work with Malawian youth and children.
                     </p>
-                    <a href="#" class="inline-block bg-chileka-blue hover:bg-blue-800 text-white font-bold py-2 px-6 rounded transition-all duration-300">
+                    <a href="#donation-form" class="inline-block bg-chileka-blue hover:bg-blue-800 text-white font-bold py-2 px-6 rounded transition-all duration-300">
                         Donate Now
                     </a>
                 </div>
@@ -222,7 +239,7 @@
                 </div>
             </div>
             
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div id="donation-form" class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="md:flex">
                     <div class="md:w-1/2 p-8">
                         <h3 class="text-2xl font-bold mb-6 text-chileka-blue">Ways to Give</h3>
@@ -285,7 +302,7 @@
         </div>
     </section>
 
-        <section id="contact" class="py-16 bg-white">
+    <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
             
@@ -306,8 +323,8 @@
                             <i class="fas fa-envelope text-chileka-blue mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-bold text-gray-800">Email Us</h4>
-                                <p class="text-gray-600">info@chilekayouth.org</p>
-                                <p class="text-gray-600">donations@chilekayouth.org</p>
+                                <p class="text-gray-600">info@cyo.mw</p>
+                                <p class="text-gray-600">donations@cyo.mw</p>
                             </div>
                         </div>
                         
@@ -315,7 +332,7 @@
                             <i class="fas fa-phone-alt text-chileka-blue mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-bold text-gray-800">Call Us</h4>
-                                <p class="text-gray-600">+265 XXX XXX XXX</p>
+                                <p class="text-gray-600">+265 889 360 744</p>
                                 <p class="text-gray-600">Mon-Fri: 8:00 AM - 5:00 PM</p>
                             </div>
                         </div>
@@ -368,7 +385,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <img src="https://res.cloudinary.com/dbed0vjcr/image/upload/v1750712658/CYO-removebg-preview_x4rwva.png" alt="Chileka Youth Organization Logo" class="h-16 mb-4">
+                    <img src="images/cyo-logo.png" alt="Chileka Youth Organization Logo" class="h-16 mb-4">
                     <p class="text-sm">Empowering Malawian youth since 2025</p>
                 </div>
                 <div>
@@ -384,8 +401,8 @@
                     <h3 class="font-bold text-lg mb-4">Contact Us</h3>
                     <address class="not-italic">
                         <p><i class="fas fa-map-marker-alt mr-2"></i> Blantyre, Southern Region, Malawi</p>
-                        <p><i class="fas fa-phone mr-2"></i> +265 XXX XXX XXX</p>
-                        <p><i class="fas fa-envelope mr-2"></i> info@chilekayouth.org</p>
+                        <p><i class="fas fa-phone mr-2"></i> +265 889 360 744</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@cyo.mw</p>
                     </address>
                 </div>
                 <div>
@@ -394,12 +411,11 @@
                         <a href="#" class="text-white hover:text-blue-300 transition-all duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
                         <a href="#" class="text-white hover:text-pink-500 transition-all duration-300"><i class="fab fa-instagram text-xl"></i></a>
                         <a href="#" class="text-white hover:text-blue-400 transition-all duration-300"><i class="fab fa-twitter text-xl"></i></a>
-
                     </div>
                     <div class="mt-4">
-                        <button class="bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-2 px-4 rounded transition-all duration-300">
+                        <a href="#donation-form" class="inline-block bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-2 px-4 rounded transition-all duration-300">
                             Donate Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
