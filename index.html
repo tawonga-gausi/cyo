@@ -12,23 +12,42 @@
             font-family: 'Poppins', sans-serif;
         }
         .hero-image {
+            /* Placeholder for a relevant image */
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg');
+            background-position: center; /* Ensure the image is centered */
+            background-size: cover; /* Ensure the image covers the section */
+        }
+
+        /* Custom colors to match logo - you might define these in tailwind.config.js */
+        .bg-chileka-blue {
+            background-color: #2F9CBB; /* Matches the 'Chileka' text in the logo */
+        }
+        .text-chileka-blue {
+            color: #2F9CBB;
+        }
+        .bg-cyo-orange {
+            background-color: #F7931E; /* Matches the orange figure in the logo */
+        }
+        .text-cyo-orange {
+            color: #F7931E;
+        }
+        .bg-cyo-dark {
+            background-color: #333333; /* Darker tone from 'Organisation' text */
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-blue-800 text-white shadow-lg">
+    <nav class="bg-chileka-blue text-white shadow-lg">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <img src="https://res.cloudinary.com/dbed0vjcr/image/upload/v1750712658/CYO-removebg-preview_x4rwva.png" alt="Chileka Youth Organization Logo" class="h-16">
             </div>
             <div class="hidden md:flex space-x-6">
-                <a href="#" class="hover:text-yellow-300">Home</a>
-                <a href="#about" class="hover:text-yellow-300">About</a>
-                <a href="#programs" class="hover:text-yellow-300">Programs</a>
-                <a href="#get-involved" class="hover:text-yellow-300">Get Involved</a>
-                <a href="#contact" class="hover:text-yellow-300">Contact</a>
+                <a href="#" class="hover:text-cyo-orange">Home</a>
+                <a href="#about" class="hover:text-cyo-orange">About</a>
+                <a href="#programs" class="hover:text-cyo-orange">Programs</a>
+                <a href="#get-involved" class="hover:text-cyo-orange">Get Involved</a>
+                <a href="#contact" class="hover:text-cyo-orange">Contact</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-white focus:outline-none">
@@ -36,117 +55,109 @@
                 </button>
             </div>
         </div>
-        <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-blue-900 px-4 pb-4">
-            <a href="#" class="block py-2 hover:text-yellow-300">Home</a>
-            <a href="#about" class="block py-2 hover:text-yellow-300">About</a>
-            <a href="#programs" class="block py-2 hover:text-yellow-300">Programs</a>
-            <a href="#get-involved" class="block py-2 hover:text-yellow-300">Get Involved</a>
-            <a href="#contact" class="block py-2 hover:text-yellow-300">Contact</a>
+            <a href="#" class="block py-2 hover:text-cyo-orange">Home</a>
+            <a href="#about" class="block py-2 hover:text-cyo-orange">About</a>
+            <a href="#programs" class="block py-2 hover:text-cyo-orange">Programs</a>
+            <a href="#get-involved" class="block py-2 hover:text-cyo-orange">Get Involved</a>
+            <a href="#contact" class="block py-2 hover:text-cyo-orange">Contact</a>
         </div>
     </nav>
 
-       <!-- Hero Section -->
-    <section class="hero-image bg-cover bg-center text-white py-24 md:py-32">
+       <section class="hero-image bg-cover bg-center text-white py-24 md:py-32">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xl font-bold mb-6">Empowering Malawian Youth</h1>
             <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Building a society where children live happily in a safe, caring environment that promotes their full potential
+                Building a society where children live happily in a safe, caring environment that promotes their full potential 
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#get-involved" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg text-lg">
+                <a href="#get-involved" class="bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-3 px-6 rounded-lg text-lg">
                     Get Involved
                 </a>
-                <a href="#programs" class="bg-transparent hover:bg-blue-700 text-white font-bold py-3 px-6 border border-white rounded-lg text-lg">
+                <a href="#programs" class="bg-transparent hover:bg-chileka-blue text-white font-bold py-3 px-6 border border-white rounded-lg text-lg">
                     Our Programs
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Impact Stats -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Impact</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div class="p-4">
-                    <div class="text-blue-600 text-4xl font-bold mb-2">1,200+</div>
+                    <div class="text-chileka-blue text-4xl font-bold mb-2">1,200+</div>
                     <div class="text-gray-600">Children Supported</div>
                 </div>
                 <div class="p-4">
-                    <div class="text-blue-600 text-4xl font-bold mb-2">15</div>
+                    <div class="text-chileka-blue text-4xl font-bold mb-2">15</div>
                     <div class="text-gray-600">Communities Reached</div>
                 </div>
                 <div class="p-4">
-                    <div class="text-blue-600 text-4xl font-bold mb-2">50+</div>
+                    <div class="text-chileka-blue text-4xl font-bold mb-2">50+</div>
                     <div class="text-gray-600">Youth Empowered</div>
                 </div>
                 <div class="p-4">
-                    <div class="text-blue-600 text-4xl font-bold mb-2">5</div>
+                    <div class="text-chileka-blue text-4xl font-bold mb-2">5</div>
                     <div class="text-gray-600">Ongoing Programs</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Programs -->
     <section id="programs" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Key Programs</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Program 1 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="child-protection.jpg" alt="Child Protection Program" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-blue-800">Child Protection</h3>
+                        <h3 class="text-xl font-bold mb-3 text-chileka-blue">Child Protection</h3>
                         <p class="text-gray-600 mb-4">
-                            Ensuring children's unique needs are met and their voices are heard in Malawi's communities.
+                            Ensuring children's unique needs are met and their voices are heard in Malawi's communities. 
                         </p>
                         <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</a>
                     </div>
                 </div>
                 
-                <!-- Program 2 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="climate-resilience.jpg" alt="Climate Resilience Program" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-blue-800">Climate Resilience</h3>
+                        <h3 class="text-xl font-bold mb-3 text-chileka-blue">Climate Resilience</h3>
                         <p class="text-gray-600 mb-4">
-                            Building poor people's capacity towards disaster risk reduction and climate resilience.
+                            Building poor people's capacity towards disaster risk reduction and climate resilience. 
                         </p>
                         <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</a>
                     </div>
                 </div>
                 
-                <!-- Program 3 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                     <img src="youth-empowerment.jpg" alt="Youth Empowerment Program" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-blue-800">Youth Empowerment</h3>
+                        <h3 class="text-xl font-bold mb-3 text-chileka-blue">Youth Empowerment</h3>
                         <p class="text-gray-600 mb-4">
-                            Promoting rights of the poor & marginalized through education and skills development.
+                            Promoting rights of the poor & marginalized through education and skills development. 
                         </p>
                         <a href="#" class="text-blue-600 hover:text-blue-800 font-semibold">Learn More →</a>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-10">
-                <a href="#" class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg">
+                <a href="#" class="inline-block bg-chileka-blue hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg">
                     View All Programs
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-16 bg-blue-800 text-white">
+    <section class="py-16 bg-chileka-blue text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-6">Join Us in Making a Difference</h2>
             <p class="text-xl mb-8 max-w-3xl mx-auto">
-                Your support helps us continue our mission to empower vulnerable children and their communities in Malawi.
+                Your support helps us continue our mission to empower vulnerable children and their communities in Malawi. 
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-lg text-lg">
+                <a href="#" class="bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-3 px-6 rounded-lg text-lg">
                     Donate Now
                 </a>
                 <a href="#" class="bg-transparent hover:bg-blue-700 text-white font-bold py-3 px-6 border border-white rounded-lg text-lg">
@@ -156,8 +167,7 @@
         </div>
     </section>
 
-        <!-- About Us Section -->
-    <section id="about" class="py-16 bg-white">
+        <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2">
@@ -166,54 +176,50 @@
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-bold mb-6 text-gray-800">About Chileka Youth Organization</h2>
                     <p class="text-gray-600 mb-4">
-                        Established in 2025, Chileka Youth Organization is a non-profit dedicated to securing rights of the poor and marginalized, promoting good governance, and developing sustainable livelihoods in Malawi.
+                        Established in 2025 , Chileka Youth Organization is a non-profit dedicated to securing rights of the poor and marginalized, promoting good governance, and developing sustainable livelihoods in Malawi. 
                     </p>
                     <p class="text-gray-600 mb-4">
-                        Our main thrust is promoting people's participation at all levels of the state and society, accountability, capacity development and access to resources.
+                        Our main thrust is promoting people's participation at all levels of the state and society, accountability, capacity development and access to resources. 
                     </p>
                     <div class="mb-6">
-                        <h3 class="text-xl font-bold mb-3 text-blue-800">Our Vision</h3>
+                        <h3 class="text-xl font-bold mb-3 text-chileka-blue">Our Vision</h3>
                         <p class="text-gray-600 italic">
-                            "A society where children live happily in a safe, caring and stimulating environment that promotes the best of their potential towards a poverty free society."
+                            "A society where children live happily in a safe, caring and stimulating environment that promotes the best of their potential towards a poverty free society." 
                         </p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold mb-3 text-blue-800">Our Mission</h3>
+                        <h3 class="text-xl font-bold mb-3 text-chileka-blue">Our Mission</h3>
                         <p class="text-gray-600 italic">
-                            "To uphold human dignity, equity and accountability through empowering and protecting vulnerable children and their communities so that these children can lead a bright future."
+                            "Chileka Youth Organization aims to uphold human dignity, equity and accountability through empowering and protecting vulnerable children and their communities so that these children can lead a bright future." 
                         </p>
                     </div>
                 </div>
             </div>
             
-            <!-- Our Team -->
             <div class="mt-20">
                 <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Leadership</h2>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Team Member 1 -->
                     <div class="bg-gray-50 rounded-lg p-6 text-center">
                         <img src="team1.jpg" alt="Board Chair" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-xl font-bold text-blue-800">John Banda</h3>
+                        <h3 class="text-xl font-bold text-chileka-blue">John Banda</h3>
                         <p class="text-gray-600 mb-3">Board Chair</p>
                         <p class="text-gray-600 text-sm">
                             With over 15 years in youth development, John leads our strategic direction.
                         </p>
                     </div>
                     
-                    <!-- Team Member 2 -->
                     <div class="bg-gray-50 rounded-lg p-6 text-center">
                         <img src="team2.jpg" alt="Executive Director" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-xl font-bold text-blue-800">Mary Phiri</h3>
+                        <h3 class="text-xl font-bold text-chileka-blue">Mary Phiri</h3>
                         <p class="text-gray-600 mb-3">Executive Director</p>
                         <p class="text-gray-600 text-sm">
                             Mary brings extensive experience in child protection and community development.
                         </p>
                     </div>
                     
-                    <!-- Team Member 3 -->
                     <div class="bg-gray-50 rounded-lg p-6 text-center">
                         <img src="team3.jpg" alt="Programs Director" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                        <h3 class="text-xl font-bold text-blue-800">James Mbewe</h3>
+                        <h3 class="text-xl font-bold text-chileka-blue">James Mbewe</h3>
                         <p class="text-gray-600 mb-3">Programs Director</p>
                         <p class="text-gray-600 text-sm">
                             James oversees all our field operations and community engagements.
@@ -224,66 +230,60 @@
         </div>
     </section>
 
-        <!-- Get Involved Section -->
-    <section id="get-involved" class="py-16 bg-gray-100">
+        <section id="get-involved" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Get Involved</h2>
             
-            <!-- Ways to Help -->
             <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <!-- Donate -->
                 <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
-                    <div class="text-blue-600 text-5xl mb-4">
+                    <div class="text-chileka-blue text-5xl mb-4">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-gray-800">Make a Donation</h3>
                     <p class="text-gray-600 mb-6">
-                        Your financial support helps us continue our vital work with Malawian youth and children.
+                        Your financial support helps us continue our vital work with Malawian youth and children. 
                     </p>
-                    <a href="#" class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-6 rounded">
+                    <a href="#" class="inline-block bg-chileka-blue hover:bg-blue-800 text-white font-bold py-2 px-6 rounded">
                         Donate Now
                     </a>
                 </div>
                 
-                <!-- Volunteer -->
                 <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
-                    <div class="text-blue-600 text-5xl mb-4">
+                    <div class="text-chileka-blue text-5xl mb-4">
                         <i class="fas fa-hands-helping"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-gray-800">Volunteer</h3>
                     <p class="text-gray-600 mb-6">
                         Share your time and skills to make a direct impact in our programs and communities.
                     </p>
-                    <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-6 rounded">
+                    <a href="#" class="inline-block bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-2 px-6 rounded">
                         Volunteer Today
                     </a>
                 </div>
                 
-                <!-- Partner -->
                 <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition-shadow">
-                    <div class="text-blue-600 text-5xl mb-4">
+                    <div class="text-chileka-blue text-5xl mb-4">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-gray-800">Partner With Us</h3>
                     <p class="text-gray-600 mb-6">
                         Organizations and businesses can collaborate with us for greater impact.
                     </p>
-                    <a href="#contact" class="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-6 rounded">
+                    <a href="#contact" class="inline-block bg-chileka-blue hover:bg-blue-800 text-white font-bold py-2 px-6 rounded">
                         Contact Us
                     </a>
                 </div>
             </div>
             
-            <!-- Donation Options -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div class="md:flex">
                     <div class="md:w-1/2 p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-blue-800">Ways to Give</h3>
+                        <h3 class="text-2xl font-bold mb-6 text-chileka-blue">Ways to Give</h3>
                         <ul class="space-y-4">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
                                 <span class="text-gray-700">
-                                    <strong>One-time donation:</strong> Immediate support for our programs
+                                    <strong>One-time donation:</strong> Immediate support for our programs 
                                 </span>
                             </li>
                             <li class="flex items-start">
@@ -295,27 +295,27 @@
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
                                 <span class="text-gray-700">
-                                    <strong>Sponsor a program:</strong> Directly fund specific initiatives
+                                    <strong>Sponsor a program:</strong> Directly fund specific initiatives 
                                 </span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
                                 <span class="text-gray-700">
-                                    <strong>In-kind donations:</strong> Goods and services that support our work
+                                    <strong>In-kind donations:</strong> Goods and services that support our work 
                                 </span>
                             </li>
                         </ul>
                     </div>
                     <div class="md:w-1/2 bg-blue-50 p-8">
-                        <h3 class="text-2xl font-bold mb-6 text-blue-800">Donation Form</h3>
+                        <h3 class="text-2xl font-bold mb-6 text-chileka-blue">Donation Form</h3>
                         <form>
                             <div class="mb-4">
                                 <label class="block text-gray-700 mb-2" for="amount">Donation Amount (MWK)</label>
-                                <div class="grid grid-cols-4 gap-2 mb-2">
-                                    <button type="button" class="bg-white border border-blue-300 rounded py-2 hover:bg-blue-100 focus:bg-blue-200">5,000</button>
-                                    <button type="button" class="bg-white border border-blue-300 rounded py-2 hover:bg-blue-100 focus:bg-blue-200">10,000</button>
-                                    <button type="button" class="bg-white border border-blue-300 rounded py-2 hover:bg-blue-100 focus:bg-blue-200">20,000</button>
-                                    <button type="button" class="bg-white border border-blue-300 rounded py-2 hover:bg-blue-100 focus:bg-blue-200">50,000</button>
+                                <div class="grid grid-cols-4 gap-2 mb-2 donation-amount">
+                                    <button type="button" class="bg-white border border-chileka-blue rounded py-2 hover:bg-blue-100 focus:bg-blue-200">5,000</button>
+                                    <button type="button" class="bg-white border border-chileka-blue rounded py-2 hover:bg-blue-100 focus:bg-blue-200">10,000</button>
+                                    <button type="button" class="bg-white border border-chileka-blue rounded py-2 hover:bg-blue-100 focus:bg-blue-200">20,000</button>
+                                    <button type="button" class="bg-white border border-chileka-blue rounded py-2 hover:bg-blue-100 focus:bg-blue-200">50,000</button>
                                 </div>
                                 <input type="text" id="amount" placeholder="Other amount" class="w-full px-3 py-2 border border-gray-300 rounded">
                             </div>
@@ -328,7 +328,7 @@
                                     <option>Annual donation</option>
                                 </select>
                             </div>
-                            <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-4 rounded">
+                            <button type="submit" class="w-full bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-3 px-4 rounded">
                                 Continue to Payment
                             </button>
                         </form>
@@ -338,27 +338,25 @@
         </div>
     </section>
 
-        <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
+        <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
             
             <div class="flex flex-col md:flex-row gap-8">
-                <!-- Contact Info -->
                 <div class="md:w-1/3 bg-blue-50 p-8 rounded-lg">
-                    <h3 class="text-xl font-bold mb-6 text-blue-800">Get in Touch</h3>
+                    <h3 class="text-xl font-bold mb-6 text-chileka-blue">Get in Touch</h3>
                     
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4"></i>
+                            <i class="fas fa-map-marker-alt text-chileka-blue mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-bold text-gray-800">Our Address</h4>
-                                <p class="text-gray-600">Blantyre, Southern Region, Malawi</p>
+                                <p class="text-gray-600">Blantyre, Southern Region, Malawi</p> 
                             </div>
                         </div>
                         
                         <div class="flex items-start">
-                            <i class="fas fa-envelope text-blue-600 mt-1 mr-4"></i>
+                            <i class="fas fa-envelope text-chileka-blue mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-bold text-gray-800">Email Us</h4>
                                 <p class="text-gray-600">info@chilekayouth.org</p>
@@ -367,7 +365,7 @@
                         </div>
                         
                         <div class="flex items-start">
-                            <i class="fas fa-phone-alt text-blue-600 mt-1 mr-4"></i>
+                            <i class="fas fa-phone-alt text-chileka-blue mt-1 mr-4"></i>
                             <div>
                                 <h4 class="font-bold text-gray-800">Call Us</h4>
                                 <p class="text-gray-600">+265 XXX XXX XXX</p>
@@ -387,30 +385,29 @@
                     </div>
                 </div>
                 
-                <!-- Contact Form -->
                 <div class="md:w-2/3">
                     <div class="bg-white border border-gray-200 rounded-lg shadow-sm p-8">
-                        <h3 class="text-xl font-bold mb-6 text-blue-800">Send Us a Message</h3>
+                        <h3 class="text-xl font-bold mb-6 text-chileka-blue">Send Us a Message</h3>
                         <form>
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
                                     <label for="name" class="block text-gray-700 mb-2">Your Name</label>
-                                    <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="text" id="name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-chileka-blue">
                                 </div>
                                 <div>
                                     <label for="email" class="block text-gray-700 mb-2">Email Address</label>
-                                    <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <input type="email" id="email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-chileka-blue">
                                 </div>
                             </div>
                             <div class="mb-6">
                                 <label for="subject" class="block text-gray-700 mb-2">Subject</label>
-                                <input type="text" id="subject" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <input type="text" id="subject" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-chileka-blue">
                             </div>
                             <div class="mb-6">
                                 <label for="message" class="block text-gray-700 mb-2">Your Message</label>
-                                <textarea id="message" rows="5" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                                <textarea id="message" rows="5" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-chileka-blue"></textarea>
                             </div>
-                            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded">
+                            <button type="submit" class="bg-chileka-blue hover:bg-blue-800 text-white font-bold py-3 px-6 rounded">
                                 Send Message
                             </button>
                         </form>
@@ -418,41 +415,40 @@
                 </div>
             </div>
             
-            <!-- Map -->
             <div class="mt-16 bg-gray-100 rounded-lg overflow-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.863096682947!2d35.00522431582205!3d-15.7861676890421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDQ3JzEwLjIiUyAzNcKwMDAnMTkuMCJF!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d35.000000!3d-15.787498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921319c5b2a0c4f%3A0xf0a71f00b9c2b4e7!2sBlantyre%2C%20Malawi!5e0!3m2!1sen!2smw!4v1719293983279!5m2!1sen!2smw"
                         width="100%" 
                         height="450" 
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
                         class="filter grayscale(50%) contrast(120%)">
                 </iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-cyo-dark text-white py-8">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <img src="https://res.cloudinary.com/dbed0vjcr/image/upload/v1750712658/CYO-removebg-preview_x4rwva.png" alt="Chileka Youth Organization Logo" class="h-16 mb-4">
-                    <p class="text-sm">Empowering Malawian youth since 2025</p>
+                    <p class="text-sm">Empowering Malawian youth since 2025</p> 
                 </div>
                 <div>
                     <h3 class="font-bold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-yellow-300">Home</a></li>
-                        <li><a href="#about" class="hover:text-yellow-300">About Us</a></li>
-                        <li><a href="#programs" class="hover:text-yellow-300">Our Programs</a></li>
-                        <li><a href="#get-involved" class="hover:text-yellow-300">Get Involved</a></li>
+                        <li><a href="#" class="hover:text-cyo-orange">Home</a></li>
+                        <li><a href="#about" class="hover:text-cyo-orange">About Us</a></li>
+                        <li><a href="#programs" class="hover:text-cyo-orange">Our Programs</a></li>
+                        <li><a href="#get-involved" class="hover:text-cyo-orange">Get Involved</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-bold text-lg mb-4">Contact Us</h3>
                     <address class="not-italic">
-                        <p><i class="fas fa-map-marker-alt mr-2"></i> Blantyre, Southern Region, Malawi</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> Blantyre, Southern Region, Malawi</p> 
                         <p><i class="fas fa-phone mr-2"></i> +265 XXX XXX XXX</p>
                         <p><i class="fas fa-envelope mr-2"></i> info@chilekayouth.org</p>
                     </address>
@@ -466,15 +462,15 @@
                         <a href="#" class="text-white hover:text-red-500"><i class="fab fa-youtube text-xl"></i></a>
                     </div>
                     <div class="mt-4">
-                        <button class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded">
+                        <button class="bg-cyo-orange hover:bg-orange-600 text-gray-900 font-bold py-2 px-4 rounded">
                             Donate Now
                         </button>
                     </div>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-6 text-sm text-center">
-                <p>&copy; 2023 Chileka Youth Organization. All rights reserved.</p>
-                <p class="mt-2">Registered Trustees of Chileka Youth Organization</p>
+                <p>© 2025 Chileka Youth Organization. All rights reserved.</p>
+                <p class="mt-2">Registered Trustees of Chileka Youth Organization</p> 
             </div>
         </div>
     </footer>
@@ -502,23 +498,26 @@
                 // Remove active class from all buttons
                 document.querySelectorAll('.donation-amount button').forEach(btn => {
                     btn.classList.remove('bg-blue-200', 'border-blue-500');
+                    // Ensure our custom border color is also removed
+                    btn.classList.remove('border-chileka-blue');
                 });
                 
                 // Add active class to clicked button
-                this.classList.add('bg-blue-200', 'border-blue-500');
+                this.classList.add('bg-blue-200', 'border-chileka-blue'); /* Use custom color for consistency */
                 
                 // Update donation amount input
                 document.getElementById('amount').value = this.textContent;
             });
         });
 
-        // Form validation
-        document.querySelector('form').addEventListener('submit', function(e) {
-            const email = document.getElementById('email').value;
-            if (!email.includes('@')) {
+        // Basic form validation for contact form email
+        document.querySelector('#contact form').addEventListener('submit', function(e) {
+            const emailInput = document.getElementById('email');
+            if (emailInput && !emailInput.value.includes('@')) {
                 e.preventDefault();
                 alert('Please enter a valid email address');
             }
+            // Add more comprehensive validation as needed
         });
     </script>
 </body>
